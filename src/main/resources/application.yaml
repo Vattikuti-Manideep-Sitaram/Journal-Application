@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Journal Application
+
+  profiles:
+    active: prod
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: journalDb
+      auto-index-creation: true
+  main:
+    allow-circular-references: true
+
+logging:
+  file:
+    name: log-application/app.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+
+sonar:
+  projectKey: "Journal Project"
+  host: "localhost"
+  token: "4ecdc696e56bf7b24a8fdefd662f7168c70ba559"

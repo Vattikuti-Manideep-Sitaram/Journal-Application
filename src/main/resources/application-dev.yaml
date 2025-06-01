@@ -1,0 +1,11 @@
+app:
+  welcome-message: "Hello all the dev users"
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: journalDb
+      auto-index-creation: true
+      allow-circular-references: true
