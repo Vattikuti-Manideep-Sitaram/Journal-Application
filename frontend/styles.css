@@ -1,0 +1,78 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffffbb;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card input,
+.card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background: #3f51b5;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #283593;
+}
+
+.hidden {
+    display: none;
+}
+
+#entries {
+    margin-top: 20px;
+}
+
+.entry {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

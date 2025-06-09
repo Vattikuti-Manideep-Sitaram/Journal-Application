@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Journal Application</h1>
+    <div id="auth-section" class="card">
+        <h2>Login</h2>
+        <input type="text" id="login-name" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-btn">Login</button>
+
+        <h3>or Sign Up</h3>
+        <input type="text" id="signup-name" placeholder="Username" />
+        <input type="password" id="signup-password" placeholder="Password" />
+        <button id="signup-btn">Create Account</button>
+    </div>
+
+    <div id="journal-section" class="card hidden">
+        <h2>New Journal Entry</h2>
+        <input type="text" id="entry-title" placeholder="Title" />
+        <textarea id="entry-content" placeholder="Write something..."></textarea>
+        <button id="add-entry-btn">Save Entry</button>
+
+        <h2>Your Entries</h2>
+        <div id="entries"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
