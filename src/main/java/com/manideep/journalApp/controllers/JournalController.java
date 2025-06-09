@@ -51,7 +51,7 @@ public class JournalController {
     }
 
     @DeleteMapping("id/{userId}/journalId/{journalId}")
-    public ResponseEntity<?> deleteJournalEntryById(@PathVariable ObjectId journalId){
+    public ResponseEntity<?> deleteJournalEntryById(@PathVariable ObjectId userId, @PathVariable ObjectId journalId){
         try{
             journalEntryService.deleteById(journalId);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -63,7 +63,7 @@ public class JournalController {
 
     @PutMapping("id/{userId}/journalId/{journalId}")
     public ResponseEntity<JournalEntry> updateJournalEntry(@PathVariable ObjectId journalId,@PathVariable ObjectId userId,@RequestBody JournalEntry newJournalEntry){
-        JournalEntry journalEntry = journalEntryService.findById(journalId,userId);
+        JournalEntry journalEntry = journalEntryService.findById(userId, journalId);
         if(journalEntry != null){
             return new ResponseEntity<>(journalEntryService.updateById(journalId,newJournalEntry,journalEntry),HttpStatus.OK);
         }

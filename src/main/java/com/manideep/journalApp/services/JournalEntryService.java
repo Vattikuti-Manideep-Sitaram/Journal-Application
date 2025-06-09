@@ -43,7 +43,9 @@ public class JournalEntryService {
         if(user != null){
             JournalEntry journalEntry = user.getJournalEntries()
                                         .stream()
-                                        .filter(x -> x.getId() == journalId).findFirst().orElse(null);
+                                        .filter(x -> journalId.equals(x.getId()))
+                                        .findFirst()
+                                        .orElse(null);
             if(journalEntry != null){
                 return journalEntry;
             }
